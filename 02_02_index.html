@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualization</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h2>SVG Graphics</h2>
+
+      <div id="viz">
+        <svg width="600" height="400" style="background-color: gray;">
+          <line x1="0" y1="200" 
+          x2="600" y2="300" 
+          style="stroke: blue; stroke-width:40px" />
+          
+          <rect 
+            x="200" y="100" width="200" height="200" 
+            style="fill: red;"
+          />
+
+          <circle
+            cx="300" cy="200" r="50"
+            style="fill:brown;"
+          />
+
+          <text
+            x="10" y="390"
+            font-family="sans-serif"
+            font-size="25"
+            fill="white" 
+          >
+          Hello SVG
+        </text>
+
+        <g id="triangle">
+          <polyline
+            points="10 35,30 10, 50 35"
+            style="fill:orange;"
+          />
+        </g>
+
+        <use xlink:href="#triangle" x="30"  y="0"/> 
+
+
+        </svg>
+      </div>
+
+    </div><!-- container -->
+    <script src="js/libraries/jquery/jquery.min.js"></script>
+    <script src="js/libraries/bootstrap/bootstrap.min.js"></script>
+    <script src="js/libraries/d3/d3.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
